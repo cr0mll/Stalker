@@ -1,5 +1,7 @@
 namespace Tests;
 
+using Stalker;
+
 public class Tests
 {
     [SetUp]
@@ -8,8 +10,15 @@ public class Tests
     }
 
     [Test]
-    public void Test1()
+    public void PersonCreation()
     {
         Assert.Pass();
     }
+
+    [Test]
+    public void NameOperations()
+    {
+        
+    }
+
 }
