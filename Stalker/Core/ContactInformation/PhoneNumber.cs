@@ -3,21 +3,21 @@ using LibPhoneNumbers = PhoneNumbers;
 
 namespace Stalker.Core.ContactInformation;
 
-public struct PhoneNumber
+public readonly struct PhoneNumber
 {
-    private static LibPhoneNumbers.PhoneNumberUtil _parser;
+    private static readonly LibPhoneNumbers.PhoneNumberUtil Parser;
     
-    private LibPhoneNumbers.PhoneNumber _number;
+    private readonly LibPhoneNumbers.PhoneNumber _number;
 
     static PhoneNumber()
     {
-        _parser = LibPhoneNumbers.PhoneNumberUtil.GetInstance();
+        Parser = LibPhoneNumbers.PhoneNumberUtil.GetInstance();
     }
 
     public static bool IsValid(string number)
     {
-        LibPhoneNumbers.PhoneNumber phoneNumber = _parser.Parse("number", "");
-        return _parser.IsValidNumber(phoneNumber);
+        LibPhoneNumbers.PhoneNumber phoneNumber = Parser.Parse("number", "");
+        return Parser.IsValidNumber(phoneNumber);
     }
     
     /// <summary>
@@ -32,9 +32,9 @@ public struct PhoneNumber
             throw new InvalidPhoneNumberException("The phone number must be specified in international format.");
         }
         
-        _number = _parser.Parse(number, "");
+        _number = Parser.Parse(number, "");
         
-        if (!_parser.IsValidNumber(_number))
+        if (!Parser.IsValidNumber(_number))
         {
             throw new InvalidPhoneNumberException("The phone number specified is invalid.");
         }

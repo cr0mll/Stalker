@@ -4,7 +4,7 @@ using Stalker.Core.ContactInformation;
 namespace Stalker.Core.RegionalInformation;
 
 /// <summary>
-/// An interface which specifies the basic data that a particular country possesses.
+/// An interface which specifies the essential attributes of a country.
 /// </summary>
 public interface ICountry
 {

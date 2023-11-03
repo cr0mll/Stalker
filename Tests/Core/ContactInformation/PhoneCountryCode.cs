@@ -1,7 +1,7 @@
 using Stalker.Core.ContactInformation;
 using Stalker.Core.RegionalInformation;
 
-namespace Tests.ContactInformation;
+namespace Tests.Core.ContactInformation;
 
 using Stalker;
 
