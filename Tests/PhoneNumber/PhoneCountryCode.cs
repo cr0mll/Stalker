@@ -1,4 +1,5 @@
-using Stalker.Utils;
+using Stalker.Core.ContactInformation;
+using Stalker.Core.RegionalInformation;
 
 namespace Tests.PhoneNumber;
 

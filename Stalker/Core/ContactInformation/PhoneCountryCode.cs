@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using System;
-using Stalker.Utils;
+using Stalker.Core.RegionalInformation;
 
-namespace Stalker;
+namespace Stalker.Core.ContactInformation;
 
 public struct PhoneCountryCode
 {
