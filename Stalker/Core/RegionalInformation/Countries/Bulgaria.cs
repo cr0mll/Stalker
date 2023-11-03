@@ -2,6 +2,9 @@ using Stalker.Core.ContactInformation;
 
 namespace Stalker.Core.RegionalInformation.Countries;
 
+/// <summary>
+/// A (wanna-be static) class which represents country information about The Republic of Bulgaria.
+/// </summary>
 public sealed class Bulgaria : ICountry
 {
     public const string CommonName = "Bulgaria";

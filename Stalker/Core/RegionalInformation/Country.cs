@@ -3,6 +3,9 @@ using Stalker.Core.ContactInformation;
 
 namespace Stalker.Core.RegionalInformation;
 
+/// <summary>
+/// An interface which specifies the basic data that a particular country possesses.
+/// </summary>
 public interface ICountry
 {
     public const string CommonName = "";
