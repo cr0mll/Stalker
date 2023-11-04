@@ -1,14 +1,6 @@
-namespace Stalker.Utils;
+namespace Stalker.Core.RegionalInformation;
 
 using System;
-
-public static class Iso3166CountryCodeExtensions
-{
-    public static string ToString(this Iso3166CountryCode code)
-    {
-        return "";
-    }
-}
 
 public class CountryCodeException : Exception
 {
@@ -24,6 +16,7 @@ public class CountryCodeException : Exception
 
 public enum Iso3166CountryCode
 {
+    None = 0,
     AF = 004, // Afghanistan
     AX = 248, // Åland Islands
     AL = 008, // Albania
