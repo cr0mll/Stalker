@@ -1,18 +1,17 @@
 using System.Collections.Generic;
-using PhoneNumbers;
 
 namespace Stalker.Core.ContactInformation;
 
-public class ContactInformation
+public class ContactInfo
 {
     public List<EmailAddress> EmailAddresses { get; set; } = new List<EmailAddress>(capacity: 1);
     public List<PhoneNumber> PhoneNumbers { get; set; } = new List<PhoneNumber>(capacity: 1);
 
-    public ContactInformation()
+    public ContactInfo()
     {
     }
     
-    public ContactInformation(List<EmailAddress> emailAddresses, List<PhoneNumber> phoneNumbers)
+    public ContactInfo(List<EmailAddress> emailAddresses, List<PhoneNumber> phoneNumbers)
     {
         EmailAddresses = emailAddresses;
         PhoneNumbers = phoneNumbers;

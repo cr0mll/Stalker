@@ -13,7 +13,7 @@ public class ContactInformationTest
     [Test]
     public void GeneralTest()
     {
-        ContactInformation info = new ContactInformation();
+        ContactInfo info = new ContactInfo();
         info.EmailAddresses.Add(new EmailAddress("abc.abc@gef.com", EmailAddressType.Personal));
         info.EmailAddresses.Add(new EmailAddress("xyz.cde@gef.com", EmailAddressType.Personal));
         info.EmailAddresses.Add(new EmailAddress("alfa.beta@gef.com", EmailAddressType.Enterprise));
