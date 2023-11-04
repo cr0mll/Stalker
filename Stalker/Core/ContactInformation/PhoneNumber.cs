@@ -9,6 +9,10 @@ public readonly struct PhoneNumber
     
     private readonly LibPhoneNumbers.PhoneNumber _number;
 
+    public PhoneNumberType Type { get; } = PhoneNumberType.Personal;
+    
+    public PhoneCountryCode CountryCode { get; }
+    
     static PhoneNumber()
     {
         Parser = LibPhoneNumbers.PhoneNumberUtil.GetInstance();
@@ -38,10 +42,29 @@ public readonly struct PhoneNumber
         {
             throw new InvalidPhoneNumberException("The phone number specified is invalid.");
         }
+        
+        CountryCode = new PhoneCountryCode((ushort)_number.CountryCode);
+    }
+
+    /// <summary>
+    /// Creates a new <c>PhoneNumber</c> of the provided type from the specified string.
+    /// </summary>
+    /// <param name="number">The string must represent a valid phone number in international format (starting with a '+').</param>
+    /// <param name="type">The type of the phone number (personal, home, work, etc.)</param>
+    /// <exception cref="InvalidPhoneNumberException">Thrown when the phone number is not in international format or is generally an invalid number.</exception>
+    public PhoneNumber(string number, PhoneNumberType type) : this(number)
+    {
+        Type = type;
     }
     
-    /// <returns>The phone number's country code.</returns>
-    public PhoneCountryCode GetCountryCode() => new PhoneCountryCode((ushort)_number.CountryCode);
+}
+
+public enum PhoneNumberType
+{
+    Personal,
+    Home,
+    Work,
+    Other
     
 }
 
