@@ -53,6 +53,24 @@ public class Person
         }
     }
 
+    /// <summary>
+    /// The current age of the person.
+    /// If they are deceased, this property indicates the age at which they passed away.
+    /// </summary>
+    public int Age
+    {
+        get
+        {
+            int referenceYear = TimeOfDeath?.Year ?? DateTime.Now.Year;
+
+            int age = referenceYear - TimeOfBirth.Year;
+            if (TimeOfBirth > DateTime.Now.AddYears(-age)) 
+                age--;
+
+            return age;
+        }
+    }
+    
     public ContactInfo ContactInformation { get; set; } = new ContactInfo();
 
     public Person()
