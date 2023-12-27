@@ -8,7 +8,7 @@ namespace Stalker.Core.RegionalInformation;
 /// </summary>
 public interface ICountry
 {
-    public const string CommonName = "";
+    public const string CommonName = null;
     public const string OfficialName = "";
     public const string FlagImagePath = "";
 
