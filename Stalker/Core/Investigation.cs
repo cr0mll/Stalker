@@ -1,10 +1,13 @@
 using System;
 using System.Text.Json.Serialization;
+using System.Xml.Serialization;
 
 namespace Stalker.Core;
 
+[Serializable]
 public class Investigation
 {
+    
     public string Name { get; set; } = "New Investigation";
     
     public string Description { get; set; } = "New investigation.";

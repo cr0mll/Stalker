@@ -22,6 +22,5 @@
 
     <ItemGroup>
       <Folder Include="Core\Investigation\" />
-      <Folder Include="Utils\" />
     </ItemGroup>
 </Project>
